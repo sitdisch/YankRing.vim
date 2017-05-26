@@ -2365,25 +2365,25 @@ function! s:YRWindowOpen(results)
     " other buffers.
     mapclear <buffer>
     " Create a mapping to act upon the yankring
-    nnoremap <buffer> <silent> <2-LeftMouse> :call <SID>YRWindowActionN('p'   , 'n')<CR>
-    nnoremap <buffer> <silent> <CR>          :call <SID>YRWindowActionN('p'   , 'n')<CR>
-    xnoremap <buffer> <silent> <CR>          :call <SID>YRWindowAction ('p'   , 'v')<CR>
-    nnoremap <buffer> <silent> p             :call <SID>YRWindowActionN('p'   , 'n')<CR>
-    nnoremap <buffer> <silent> [p            :call <SID>YRWindowActionN('[p'  , 'n')<CR>
-    nnoremap <buffer> <silent> ]p            :call <SID>YRWindowActionN(']p'  , 'n')<CR>
-    xnoremap <buffer> <silent> p             :call <SID>YRWindowAction ('p'   , 'v')<CR>
-    xnoremap <buffer> <silent> [p            :call <SID>YRWindowAction ('[p'  , 'v')<CR>
-    xnoremap <buffer> <silent> ]p            :call <SID>YRWindowAction (']p'  , 'v')<CR>
-    nnoremap <buffer> <silent> P             :call <SID>YRWindowActionN('P'   , 'n')<CR>
-    nnoremap <buffer> <silent> [P            :call <SID>YRWindowActionN('[P'  , 'n')<CR>
-    nnoremap <buffer> <silent> ]P            :call <SID>YRWindowActionN(']P'  , 'n')<CR>
-    xnoremap <buffer> <silent> P             :call <SID>YRWindowAction ('P'   , 'v')<CR>
-    xnoremap <buffer> <silent> [P            :call <SID>YRWindowAction ('[P'  , 'v')<CR>
-    xnoremap <buffer> <silent> ]P            :call <SID>YRWindowAction (']P'  , 'v')<CR>
-    nnoremap <buffer> <silent> gp            :call <SID>YRWindowActionN('gp'  , 'n')<CR>
-    xnoremap <buffer> <silent> gp            :call <SID>YRWindowAction ('gp'  , 'v')<CR>
-    nnoremap <buffer> <silent> gP            :call <SID>YRWindowActionN('gP'  , 'n')<CR>
-    xnoremap <buffer> <silent> gP            :call <SID>YRWindowAction ('gP'  , 'v')<CR>
+    nnoremap <buffer> <silent> <2-LeftMouse> :call <SID>YRWindowActionN('p'   , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> <CR>          :call <SID>YRWindowActionN('p'   , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> <CR>          :call <SID>YRWindowAction ('p'   , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> p             :call <SID>YRWindowActionN('p'   , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> [p            :call <SID>YRWindowActionN('[p'  , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> ]p            :call <SID>YRWindowActionN(']p'  , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> p             :call <SID>YRWindowAction ('p'   , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> [p            :call <SID>YRWindowAction ('[p'  , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> ]p            :call <SID>YRWindowAction (']p'  , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> P             :call <SID>YRWindowActionN('P'   , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> [P            :call <SID>YRWindowActionN('[P'  , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> ]P            :call <SID>YRWindowActionN(']P'  , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> P             :call <SID>YRWindowAction ('P'   , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> [P            :call <SID>YRWindowAction ('[P'  , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> ]P            :call <SID>YRWindowAction (']P'  , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> gp            :call <SID>YRWindowActionN('gp'  , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> gp            :call <SID>YRWindowAction ('gp'  , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> gP            :call <SID>YRWindowActionN('gP'  , 'n')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    xnoremap <buffer> <silent> gP            :call <SID>YRWindowAction ('gP'  , 'v')<CR><c-w>p:YRShow<cr>:YRShow<cr>:YRShow<cr>
     nnoremap <buffer> <silent> d             :call <SID>YRWindowActionN('d'   , 'n')<CR>
     xnoremap <buffer> <silent> d             :call <SID>YRWindowAction ('d'   , 'v')<CR>
     xnoremap <buffer> <silent> r             :call <SID>YRWindowAction ('r'   , 'v')<CR>
@@ -2395,15 +2395,15 @@ function! s:YRWindowOpen(results)
     nnoremap <buffer> <silent> u             :call <SID>YRWindowAction ('u'   , 'n')<CR>
     nnoremap <buffer> <silent> q             :call <SID>YRWindowAction ('q'   , 'n')<CR>
     nnoremap <buffer> <silent> R             :call <SID>YRWindowAction ('R'   , 'n')<CR>
-    nnoremap <buffer> <silent> 1             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(1)<CR>
-    nnoremap <buffer> <silent> 2             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(2)<CR>
-    nnoremap <buffer> <silent> 3             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(3)<CR>
-    nnoremap <buffer> <silent> 4             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(4)<CR>
-    nnoremap <buffer> <silent> 5             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(5)<CR>
-    nnoremap <buffer> <silent> 6             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(6)<CR>
-    nnoremap <buffer> <silent> 7             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(7)<CR>
-    nnoremap <buffer> <silent> 8             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(8)<CR>
-    nnoremap <buffer> <silent> 9             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(9)<CR>
+    nnoremap <buffer> <silent> 1             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(1)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 2             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(2)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 3             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(3)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 4             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(4)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 5             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(5)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 6             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(6)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 7             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(7)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 8             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(8)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
+    nnoremap <buffer> <silent> 9             :call <SID>YRWindowAction ('q' ,'n')<CR>:call <SID>YRGetElem(9)<CR>:YRShow<cr>:YRShow<cr>:YRShow<cr>
     nnoremap <buffer> <silent> <space>     \|:silent exec 'vertical resize '.
                 \ (
                 \ g:yankring_window_use_horiz!=1 && winwidth('.') > g:yankring_window_width
